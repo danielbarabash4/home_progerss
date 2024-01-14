@@ -1,0 +1,26 @@
+.layout{
+  height: 100%;
+  box-sizing: border-box;
+  display:grid;
+  grid-template-rows: 15% 75% 10%;
+  grid-template-columns: repeat(6 ,1fr);
+
+  header,footer{
+    grid-column: span 6;
+  }
+
+  main{
+    grid-column: span 5;
+  }
+}
+
+.header{
+  background-color: rgb(234, 234, 234);
+    display: flex;
+    align-items: center;
+}
+
+.layout,
+.layout>* {
+    border: 1px solid rgb(0, 0, 0);
+}
