@@ -8,6 +8,8 @@ import { FooterComponent } from './Layout/footer/footer.component';
 import { MainComponent } from './Layout/main/main.component';
 import { MenuComponent } from './Layout/menu/menu.component';
 import { GamesListComponent } from './Pages/games-list/games-list.component';
+import { CryptoListComponent } from './Pages/crypto-list/crypto-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { GamesListComponent } from './Pages/games-list/games-list.component';
     FooterComponent,
     MainComponent,
     MenuComponent,
-    GamesListComponent
+    GamesListComponent,
+    CryptoListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
