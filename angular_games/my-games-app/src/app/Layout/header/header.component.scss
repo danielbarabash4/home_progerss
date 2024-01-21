@@ -1,0 +1,27 @@
+@mixin basicInput{
+  padding: 10px 8px;
+  border-radius: 7px;
+  border: solid 1px grey;
+  color: black;
+  font-size: 17px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.menuBtn {
+  @include basicInput()
+}
+
+.title {
+  color: white;
+  font-weight: bolder;
+  font-size: 30px;
+  color: white;
+  font-style: normal;
+}
+
+.search {
+  @include basicInput();
+  padding: 5px 5px;
+  border-radius: 20px;
+}

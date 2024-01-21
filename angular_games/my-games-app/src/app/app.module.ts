@@ -10,6 +10,7 @@ import { MenuComponent } from './Layout/menu/menu.component';
 import { GamesListComponent } from './Pages/games-list/games-list.component';
 import { CryptoListComponent } from './Pages/crypto-list/crypto-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -19,12 +20,13 @@ import { HttpClientModule } from '@angular/common/http';
     MainComponent,
     MenuComponent,
     GamesListComponent,
-    CryptoListComponent
+    CryptoListComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
