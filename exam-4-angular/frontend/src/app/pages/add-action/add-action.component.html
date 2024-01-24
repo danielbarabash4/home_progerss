@@ -1,0 +1,38 @@
+<h1>Make An Action</h1>
+<div class="box">
+  <br />
+  <input
+    type="number"
+    placeholder="enter your account number"
+    (input)="accountNum($event)"
+  />
+  <br />
+  <input
+    type="number"
+    placeholder="enter the amount of money"
+    (input)="amountNum($event)"
+  />
+  <br />
+  <select (input)="actionType($event)">
+    <option disabled selected>Choose an action</option>
+    <option>deposit</option>
+    <option>witdraw</option>
+    <option>loan</option>
+  </select>
+
+  <div *ngIf="theAction === 'loan'">
+    <div class="txt">choose a return date</div>
+    <input
+      type="date"
+      placeholder="enter the amount of money"
+      (input)="returnDate($event)"
+    />
+    <input
+      type="number"
+      placeholder="number of payments"
+      (input)="paymentsNum($event)"
+    />
+  </div>
+  <br />
+  <button class="btn" (click)="onBtnClick()">Add the Action</button>
+</div>
