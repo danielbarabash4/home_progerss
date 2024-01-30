@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchService } from '../../Services/search.service';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-header',
@@ -8,33 +10,16 @@ import { SearchService } from '../../Services/search.service';
 })
 export class HeaderComponent implements OnInit {
   theEvent = '';
-  text = "";
-  menuIcon = 'https://cdn-icons-png.flaticon.com/512/660/660376.png';
 
-  constructor(private gameName: SearchService) {}
-
-  ngOnInit(): void {}
-
-  addNewName(){
-    // this.gameName.addName(this.theEvent);
-    // console.log(this.gameName.getName())
-    console.log(this.theEvent)
-    this.text = this.theEvent;
-    this.theEvent ="";
+  constructor(private gameName: SearchService) {
+    this.gameName.currentGameName.subscribe(msg => this.theEvent = msg)
   }
 
-  searchBar(event: any) {
-    console.log(event.target.value);
-    this.theEvent = event.target.value;
-
-    this.gameName.addName(this.theEvent);
+  ngOnInit(): void {
   }
 
-  update(){
-    this.gameName.addName(this.theEvent)
-    console.log(this.gameName.getName())
-    this.gameName.getName()
-    ;
-  }
-
+  searchBar() {
+    console.log(this.theEvent);
+    this.gameName.newGameName(this.theEvent);
+  };
 }

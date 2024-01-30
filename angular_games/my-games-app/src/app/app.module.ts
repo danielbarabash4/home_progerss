@@ -9,8 +9,9 @@ import { FooterComponent } from './Layout/footer/footer.component';
 import { MainComponent } from './Layout/main/main.component';
 import { MenuComponent } from './Layout/menu/menu.component';
 import { GamesListComponent } from './Pages/games-list/games-list.component';
-import { CryptoListComponent } from './Pages/crypto-list/crypto-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { Page404Component } from './Pages/page404/page404.component';
+import { SingleItemComponent } from './Pages/single-item/single-item.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     MainComponent,
     MenuComponent,
     GamesListComponent,
-    CryptoListComponent,
+    Page404Component,
+    SingleItemComponent,
   ],
   imports: [
     BrowserModule,

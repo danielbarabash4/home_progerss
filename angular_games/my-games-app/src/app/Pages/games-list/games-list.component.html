@@ -1,1 +1,6 @@
-<p>games-list works!</p>
+<div *ngIf="theGames.length > 1" class="box">
+  <div *ngFor="let item of theGames" class="singleGame">
+    <app-single-item [item]="item"></app-single-item>
+
+  </div>
+</div>

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CryptoListComponent } from './crypto-list.component';
+import { SingleItemComponent } from './single-item.component';
 
-describe('CryptoListComponent', () => {
-  let component: CryptoListComponent;
-  let fixture: ComponentFixture<CryptoListComponent>;
+describe('SingleItemComponent', () => {
+  let component: SingleItemComponent;
+  let fixture: ComponentFixture<SingleItemComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CryptoListComponent]
+      declarations: [SingleItemComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(CryptoListComponent);
+    fixture = TestBed.createComponent(SingleItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

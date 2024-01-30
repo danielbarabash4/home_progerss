@@ -1,23 +1,18 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SearchService {
 
-  gameName : any = "" ;
+private gameNameSource = new BehaviorSubject<string>("");
+currentGameName = this.gameNameSource.asObservable();
 
-  constructor() {
-    this.gameName = "daniel";
-  }
+  constructor() { }
 
-  getName(){
-    return this.gameName;
-
-  }
-
-  addName(newName:any){
-    this.gameName = newName;
+  newGameName(msg:string){
+    this.gameNameSource.next(msg);
   }
 
 }

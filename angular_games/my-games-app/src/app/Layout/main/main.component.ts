@@ -10,15 +10,19 @@ export class MainComponent implements OnInit {
 
   searchName = "";
 
-  constructor(private gameName:SearchService) {
-    this.searchName = gameName.getName();
-  }
+  testArray =
+  ["1","2","3","4",
+  "5","6","7","8",
+  "9","10","11","12",
+  "13","14","15","16",
+  "17","18","19","20"]
 
-  updatePage(){
-    this.searchName = this.gameName.getName();
+  constructor(private gameName:SearchService) {
+    this.gameName.currentGameName.subscribe(msg => this.searchName = msg)
   }
 
   ngOnInit(): void {
+
   }
 
 }

@@ -6,10 +6,12 @@ describe('Page404Component', () => {
   let component: Page404Component;
   let fixture: ComponentFixture<Page404Component>;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
       declarations: [Page404Component]
-    });
+    })
+    .compileComponents();
+    
     fixture = TestBed.createComponent(Page404Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
