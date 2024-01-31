@@ -1,3 +1,17 @@
 <div>
-  <div><img class="picture" src="{{item.background_image}}" alt=""/></div>
+  <img class="picture" src="{{ item.background_image }}" alt="" />
+  <br />
+
+  <span class="name">{{ item.name }}</span>
+  <br />
+
+  <div class="firstRow">
+    <div class="genresNames">
+      <div *ngFor="let game of item.genres" class="oneGenre">
+        {{ game.name }}
+      </div>
+    </div>
+    <div class="rating">rating: {{ item.rating }}</div>
+  </div>
+
 </div>

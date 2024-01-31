@@ -25,17 +25,11 @@ export class GamesListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    //console.log(this.games.getGames());
     this.getGamesInfo();
   }
 
+  //API call for the game list
   getGamesInfo = async () => {
-    // return new Promise((resolve, reject) => {
-    //   resolve(
-    //     this.theGames = this.games.getGames()
-    //   )
-    //   reject(console.log("error"))
-    // })
     const fullData = await this.games.getGames();
     try {
       console.log(fullData)

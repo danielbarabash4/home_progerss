@@ -1,4 +1,39 @@
-.picture{
-  width: 220px;
-  height: 115px;
+.picture {
+  border-radius: 8px;
+  margin-top: 10px;
+  width: 90%;
+  height: 150px;
+  border: 1px solid black;
+}
+
+.name {
+  color: white;
+  font-size: 20px;
+}
+
+.firstRow {
+  display: flex;
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  justify-content: space-between;
+
+  .genresNames {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: start;
+    color: white;
+  }
+
+  .oneGenre {
+    padding-left: 3px;
+    padding-right: 3px;
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+
+  .rating{
+
+  }
 }
