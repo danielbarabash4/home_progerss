@@ -1,0 +1,38 @@
+<div class="gameBox" *ngIf="game">
+
+  <div class="imgContainer">
+    <div class="gameInfo">
+      <h1>{{ game.name }}</h1>
+      <div class="platHolder">
+        <span class="eachPlat" *ngFor="let item of game.metacritic_platforms">{{
+          item.platform.name
+        }}</span>
+      </div>
+      <div class="rating">
+        <span class="ratingBox">{{ game.metacritic }}</span>
+      </div>
+    </div>
+
+    <img class="gameImg" src="{{ game.background_image }}" alt="" />
+  </div>
+
+  <div class="descContainer">
+    <div class="desc">
+      <h3>GAME DESCRIPTION</h3>
+      <span>{{game.description_raw}}</span>
+    </div>
+    <div class="details">
+      <span *ngFor="let item of game.publishers">PUBLISHER: {{item.name}}</span><br/>
+      <span *ngFor="let item of game.genres">GENRES: {{item.name}}</span><br/>
+      <span>ERSB: {{game.esrb_rating.name}}</span><br/>
+      <span>RELEASE DATE: {{game.released}}</span><br/>
+      <span>AVAILABLE NOW ON:</span><br/>
+      <span *ngFor="let item of game.stores">{{item.store.name}}</span>
+      <span>TAGS:</span><br/>
+      <span *ngFor="let item of game.tags">{{item.name}}</span>
+    </div>
+
+  </div>
+
+
+</div>

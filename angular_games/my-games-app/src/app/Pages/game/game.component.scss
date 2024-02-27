@@ -1,0 +1,74 @@
+.gameBox {
+  .gameImg {
+    position: relative;
+    z-index: 0;
+    top: -178px;
+    width: 100%;
+  }
+
+  .gameInfo {
+    top: 30px;
+    position: relative;
+    z-index: 1;
+    padding: 3px;
+    text-align: center;
+    color: white;
+    background-color: rgb(0, 0, 0, 0.5);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 500px;
+
+    .rating {
+      color: rgb(0, 174, 0);
+      font-weight: bolder;
+      margin-top: 10px;
+      display: flex;
+      justify-content: start;
+      font-size: 30px;
+
+      .ratingBox {
+        border: 3px solid rgb(0, 174, 0);
+        padding: 5px;
+        border-radius: 8px;
+      }
+    }
+
+    .platHolder {
+      gap: 10px;
+      display: flex;
+
+      .eachPlat {
+        border: 1px solid white;
+        font-weight: bolder;
+        font-size: 20px;
+        padding: 3px;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+.descContainer{
+  background-color: rgb(64, 59, 67);
+  width: 90%;
+  margin: auto;
+  border-radius: 6px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+
+  .desc{
+    padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    color: white;
+    width: 45%;
+  }
+
+  .details{
+    padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    color: white;
+    width: 45%;
+  }
+}

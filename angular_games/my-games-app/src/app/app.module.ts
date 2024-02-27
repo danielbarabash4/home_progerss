@@ -12,6 +12,7 @@ import { GamesListComponent } from './Pages/games-list/games-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Page404Component } from './Pages/page404/page404.component';
 import { SingleItemComponent } from './Pages/single-item/single-item.component';
+import { GameComponent } from './Pages/game/game.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { SingleItemComponent } from './Pages/single-item/single-item.component';
     GamesListComponent,
     Page404Component,
     SingleItemComponent,
+    GameComponent,
   ],
   imports: [
     BrowserModule,

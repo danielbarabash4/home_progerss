@@ -1,17 +1,15 @@
-<div>
+<div routerLink="game/{{item.id}}">
   <img class="picture" src="{{ item.background_image }}" alt="" />
   <br />
-
-  <span class="name">{{ item.name }}</span>
+  <div class="firstRow">
+    <span class="name">{{ item.name }}</span>
+    <div class="rating">&#9734; {{ item.rating }}</div>
+  </div>
   <br />
 
-  <div class="firstRow">
-    <div class="genresNames">
-      <div *ngFor="let game of item.genres" class="oneGenre">
-        {{ game.name }}
-      </div>
+  <div class="genresNames">
+    <div *ngFor="let game of item.genres" class="oneGenre">
+      {{ game.name }}
     </div>
-    <div class="rating">rating: {{ item.rating }}</div>
   </div>
-
 </div>
